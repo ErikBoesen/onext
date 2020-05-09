@@ -1,5 +1,8 @@
 <div>
     {{ item.label }}
+    {% if icon %}
+    <i class="fa fa-{{ icon }}"></i>
+    {% endif %}
     {{ item }}
     {% for error in item.errors %}
     <span class="error">{{ error }}</span>

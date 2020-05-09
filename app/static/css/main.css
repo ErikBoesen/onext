@@ -1,10 +1,43 @@
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/jost/v1/92z8tBhPNqw79Ij1C9z1vBQv7mxrZh9NHHnUBkLNPUtGwv1mPRTOmqVU7ial.woff) format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+}
+
 body {
-    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
     background: white;
     color: #111;
+}
+
+a {
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+footer {
+    margin-top: 20px;
 }

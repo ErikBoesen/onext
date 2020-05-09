@@ -4,12 +4,12 @@
     {{ form.hidden_tag() }}
 
     {% with item = form.id %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.chrome_url %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.firefox_url %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.safari_url %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.opera_url %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.edge_url %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.fallback_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.chrome_url, icon = "chrome" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.firefox_url, icon = "firefox" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.safari_url, icon = "safari" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.opera_url, icon = "opera" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.edge_url, icon = "edge" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.fallback_url, icon = "globe" %}{% include "_input.html" %}{% endwith %}
 
     <p>{{ form.submit() }}</p>
 </form>
