@@ -4,7 +4,7 @@ from wtforms.validators import DataRequired, Length, URL
 from app.models import User
 
 
-class BotForm(FlaskForm):
+class LinkForm(FlaskForm):
     id = StringField('Shortlink', validators=[DataRequired(), Length(min=3, max=30)])
 
     chrome_url  = StringField('Chrome Web Store URL')
