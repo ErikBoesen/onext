@@ -20,7 +20,7 @@ def index():
         db.session.add(link)
         db.session.commit()
         flash('Created link ' + link.id + '!')
-    return render_template('index.html')
+    return render_template('index.html', form=form)
 
 
 @app.route('/about')
