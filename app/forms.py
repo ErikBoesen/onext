@@ -5,6 +5,8 @@ from app.models import User
 
 
 class BotForm(FlaskForm):
+    id = StringField('Shortlink', validators=[DataRequired(), Length(min=3, max=30)])
+
     chrome_url  = StringField('Chrome Web Store URL')
     firefox_url = StringField('Mozilla Add-ons URL')
     safari_url  = StringField('Safari Extension URL')
