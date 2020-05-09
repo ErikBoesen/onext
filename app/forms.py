@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Length, URL
-from app.models import User
+from app.models import Link
 
 
 class LinkForm(FlaskForm):

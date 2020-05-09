@@ -30,4 +30,3 @@ def about():
 
 def random_string():
     return ''.join([random.choice(string.ascii_letters) for i in range(8)])
-
