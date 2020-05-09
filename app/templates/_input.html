@@ -3,7 +3,7 @@
     {% if icon %}
     <i class="fa fa-{{ icon }}"></i>
     {% endif %}
-    {{ item }}
+    {{ item(placeholder=placeholder) }}
     {% for error in item.errors %}
     <span class="error">{{ error }}</span>
     {% endfor %}

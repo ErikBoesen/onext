@@ -4,11 +4,11 @@
     {{ form.hidden_tag() }}
 
     {% with item = form.id %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.chrome_url, icon = "chrome" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.firefox_url, icon = "firefox" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.safari_url, icon = "safari" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.opera_url, icon = "opera" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.edge_url, icon = "edge" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.chrome_url, icon = "chrome", placeholder = "https://chrome.google.com/webstore/detail/" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.firefox_url, icon = "firefox", placeholder = "https://addons.mozilla.org/en-US/firefox/addon/" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.safari_url, icon = "safari", placeholder = "https://apps.apple.com/us/app/" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.opera_url, icon = "opera", placeholder = "https://addons.opera.com/en/extensions/details/" %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.edge_url, icon = "edge", placeholder = "https://microsoftedge.microsoft.com/addons/detail/" %}{% include "_input.html" %}{% endwith %}
     {% with item = form.fallback_url, icon = "globe" %}{% include "_input.html" %}{% endwith %}
 
     <p>{{ form.submit() }}</p>
