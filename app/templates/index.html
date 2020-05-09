@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "_token.html" %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+
+    {% with item = form.id %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.chrome_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.firefox_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.safari_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.opera_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.edge_url %}{% include "_input.html" %}{% endwith %}
+    {% with item = form.fallback_url %}{% include "_input.html" %}{% endwith %}
+
+    <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
