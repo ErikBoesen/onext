@@ -26,21 +26,16 @@ def random_string():
 def create_link():
     form = BotForm()
     if form.validate_on_submit():
-        link = Link(id=,
+        link = Link(id=form.id.data,
                     chrome_url=form.chrome_url.data,
                     firefox_url=form.firefox_url.data,
                     safari_url=form.safari_url.data,
                     opera_url=form.opera_url.data,
                     edge_url=form.edge_url.data,
-
-
-
-                  )
-        bot.reset_token()
-        bot.owner = current_user
-        db.session.add(bot)
+                    fallback_url=form.fallback_url.data)
+        db.session.add(link)
         db.session.commit()
-        flash('Successfully created bot ' + bot.name + '!')
+        flash('Created link ' + link.id + '!')
         return redirect(url_for('edit_bot', slug=bot.slug))
     return render_template('edit_bot.html',
                            title='Create new bot',
