@@ -1,6 +1,4 @@
-from app import app, db, login
-import os
-import binascii
+from app import app, db
 
 
 class Link(db.Model):
