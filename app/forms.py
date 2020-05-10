@@ -7,11 +7,11 @@ from app.models import Link
 class LinkForm(FlaskForm):
     id = StringField('Shortlink', validators=[DataRequired(), Length(min=3, max=30)])
 
-    chrome_url  = StringField('Chrome Web Store URL')
-    firefox_url = StringField('Mozilla Add-ons URL')
-    safari_url  = StringField('Safari Extension URL')
-    opera_url   = StringField('Opera Extension URL')
-    edge_url    = StringField('MS Edge Extension URL')
+    chrome_url  = StringField('Chrome Extension')
+    firefox_url = StringField('Mozilla Add-on')
+    safari_url  = StringField('Safari Extension')
+    opera_url   = StringField('Opera Extension')
+    edge_url    = StringField('Edge Extension')
 
     fallback_url = StringField('Fallback URL', validators=[DataRequired()])
 
