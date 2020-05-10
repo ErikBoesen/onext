@@ -31,3 +31,20 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/<id>')
+def open_link(id):
+    browser = request.user_agent.browser
+    link = Link.query.get(id)
+    if browser == 'chrome':
+        return redirect(link.chrome_url)
+    if browser == 'firefox':
+        return redirect(link.firefox_url)
+    if browser == 'safari':
+        return redirect(link.safari_url)
+    if browser == 'opera':
+        return redirect(link.opera_url)
+    if browser == 'edge':
+        return redirect(link.edge_url)
+
+    return redirect(link.fallback_url or link.chrome_url or link.firefox_url or link.safari_url or link.opera_url or link.edge_url)
