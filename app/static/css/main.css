@@ -28,7 +28,7 @@ body {
 }
 
 main {
-    max-width: 8in;
+    max-width: 4in;
 }
 
 a {
@@ -43,13 +43,15 @@ h2 {
 }
 
 .entry {
-
 }
-.entry.full {
-
+.entry div {
+    display: flex;
+    align-items: center;
+}
+.entry i {
+    margin-right: 5px;
 }
 
-.entry .fa-link { color: #344ea9; }
 .entry.full .fa-chrome  { color: #3cba54; }
 .entry.full .fa-firefox { color: #ff7139; }
 .entry.full .fa-safari  { color: #006CFF; }
@@ -73,7 +75,7 @@ textarea,
 input[type="text"],
 input[type="password"] {
     padding: 5px;
-    width: 350px;
+    width: 100%;
     border: solid 1px #ddd;
     display: inline;
     font: inherit;
