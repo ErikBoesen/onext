@@ -1,9 +1,9 @@
-<div>
+<div class="entry">
     {{ item.label }}
     {% if icon %}
     <i class="fa fa-{{ icon }}"></i>
     {% endif %}
-    {{ item(placeholder=placeholder) }}
+    {% if inside %}<span class="inside">{{ inside }}</span>{% endif %}{{ item(placeholder=placeholder) }}
     {% for error in item.errors %}
     <span class="error">{{ error }}</span>
     {% endfor %}
