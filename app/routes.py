@@ -24,7 +24,6 @@ def index():
                     fallback_url=form.fallback_url.data)
         db.session.add(link)
         db.session.commit()
-        flash('Created link ' + link.id + '!')
         return render_template('success.html', id=link.id)
     return render_template('index.html', form=form, id=random_string())
 
