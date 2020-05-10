@@ -27,6 +27,10 @@ body {
     color: #111;
 }
 
+main {
+    max-width: 8in;
+}
+
 a {
     color: inherit;
 }
@@ -37,6 +41,21 @@ a:hover {
 h2 {
     font-size: 40px;
 }
+
+.entry {
+
+}
+.entry.full {
+
+}
+
+.entry .fa-link    { color: #344ea9; }
+.entry.full .fa-chrome  { color: #3cba54; }
+.entry.full .fa-firefox { color: #ff7139; }
+.entry.full .fa-safari  { color: #006CFF; }
+.entry.full .fa-opera   { color: #ff1b2d; }
+.entry.full .fa-edge    { color: #3277bc; }
+.entry.full .fa-globe   { color: #18247e; }
 
 footer {
     margin-top: 20px;
