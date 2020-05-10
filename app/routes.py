@@ -36,15 +36,15 @@ def about():
 def open_link(id):
     browser = request.user_agent.browser
     link = Link.query.get(id)
-    if browser == 'chrome':
+    if browser == 'chrome' and link.chrome_url:
         return redirect(link.chrome_url)
-    if browser == 'firefox':
+    if browser == 'firefox' and link.firefox_url:
         return redirect(link.firefox_url)
-    if browser == 'safari':
+    if browser == 'safari' and link.safari_url:
         return redirect(link.safari_url)
-    if browser == 'opera':
+    if browser == 'opera' and link.opera_url:
         return redirect(link.opera_url)
-    if browser == 'edge':
+    if browser == 'edge' and link.edge_url:
         return redirect(link.edge_url)
 
     return redirect(link.fallback_url or link.chrome_url or link.firefox_url or link.safari_url or link.opera_url or link.edge_url)
