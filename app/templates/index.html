@@ -3,7 +3,16 @@
 <form action="" method="post">
     {{ form.hidden_tag() }}
 
-    {% with item = form.id, icon = "link", inside = "onext.io/" %}{% include "_input.html" %}{% endwith %}
+    <span class="inside">{{ inside }}</span>
+
+    <div class="entry">
+        <div>
+        onext.io/{{ form.id(placeholder=placeholder) }}
+        </div>
+        {% for error in form.id.errors %}
+        <span class="error">{{ error }}</span>
+        {% endfor %}
+    </div>
     {% with item = form.chrome_url, icon = "chrome", placeholder = "chrome.google.com/webstore/detail/" %}{% include "_input.html" %}{% endwith %}
     {% with item = form.firefox_url, icon = "firefox", placeholder = "addons.mozilla.org/en-US/firefox/addon/" %}{% include "_input.html" %}{% endwith %}
     {% with item = form.safari_url, icon = "safari", placeholder = "apps.apple.com/us/app/" %}{% include "_input.html" %}{% endwith %}
