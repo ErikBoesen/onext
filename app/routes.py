@@ -4,6 +4,11 @@ from app import app, db
 from app.forms import LinkForm
 from app.models import Link
 import random
+import string
+
+
+def random_string():
+    return ''.join([random.choice(string.ascii_letters) for i in range(8)])
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -20,13 +25,10 @@ def index():
         db.session.add(link)
         db.session.commit()
         flash('Created link ' + link.id + '!')
-    return render_template('index.html', form=form)
+        return render_template('success.html', id=link.id)
+    return render_template('index.html', form=form, id=random_string())
 
 
 @app.route('/about')
 def about():
     return render_template('about.html')
-
-
-def random_string():
-    return ''.join([random.choice(string.ascii_letters) for i in range(8)])
