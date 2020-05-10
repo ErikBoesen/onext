@@ -49,7 +49,7 @@ h2 {
 
 }
 
-.entry .fa-link    { color: #344ea9; }
+.entry .fa-link { color: #344ea9; }
 .entry.full .fa-chrome  { color: #3cba54; }
 .entry.full .fa-firefox { color: #ff7139; }
 .entry.full .fa-safari  { color: #006CFF; }
@@ -59,4 +59,34 @@ h2 {
 
 footer {
     margin-top: 20px;
+}
+
+/* Forms */
+form {}
+form div {
+    margin: 5px 0;
+}
+form label {
+    display: block;
+}
+textarea,
+input[type="text"],
+input[type="password"] {
+    padding: 5px;
+    width: 350px;
+    border: solid 1px #ddd;
+    display: inline;
+    font: inherit;
+    outline: none;
+}
+textarea {
+    min-height: 80px;
+}
+form span input[type="checkbox"],
+form span label {
+    display: inline;
+}
+form .error {
+    display: block;
+    color: #DD3333;
 }
