@@ -4,7 +4,7 @@
 > A multi-platform link shortener for browser extensions, similar to onelink.to.
 
 ## Platform
-Onext runs on [Heroku](https://heroku.com). It is build upon Flask and uses PostgreSQL for database management.
+Onext runs on [Heroku](https://heroku.com). It is built with Flask and uses PostgreSQL for database management.
 
 ## Author
 [Erik Boesen](https://github.com/ErikBoesen)
