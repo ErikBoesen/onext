@@ -28,9 +28,18 @@ body {
 }
 
 main {
-    max-width: 4in;
 }
 
+.row {
+}
+.column {
+    max-width: 4in;
+    display: inline-block;
+    vertical-align: top;
+}
+.column:first-child {
+    margin-right: 10px;
+}
 a {
     color: inherit;
 }
@@ -43,6 +52,7 @@ h2 {
 }
 
 .entry {
+    max-width: 100%;
 }
 .entry div {
     display: flex;
@@ -58,6 +68,11 @@ h2 {
 .entry.full .fa-opera   { color: #ff1b2d; }
 .entry.full .fa-edge    { color: #3277bc; }
 .entry.full .fa-globe   { color: #18247e; }
+
+#qr {
+    margin-top: 10px;
+    max-width: 100%;
+}
 
 footer {
     margin-top: 20px;
