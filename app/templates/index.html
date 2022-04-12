@@ -3,21 +3,29 @@
 <form action="" method="post">
     {{ form.hidden_tag() }}
 
-    <div class="entry">
-        <div>
-        onext.io/{{ form.id(value=id) }}
+    <div class="row">
+        <div class="column">
+            {% with item = form.chrome_url, icon = "chrome", placeholder = "chrome.google.com/webstore/detail/" %}{% include "_input.html" %}{% endwith %}
+            {% with item = form.firefox_url, icon = "firefox", placeholder = "addons.mozilla.org/en-US/firefox/addon/" %}{% include "_input.html" %}{% endwith %}
+            {% with item = form.safari_url, icon = "safari", placeholder = "apps.apple.com/us/app/" %}{% include "_input.html" %}{% endwith %}
+            {% with item = form.opera_url, icon = "opera", placeholder = "addons.opera.com/en/extensions/details/" %}{% include "_input.html" %}{% endwith %}
+            {% with item = form.edge_url, icon = "edge", placeholder = "microsoftedge.microsoft.com/addons/detail/" %}{% include "_input.html" %}{% endwith %}
+            {% with item = form.fallback_url, icon = "globe" %}{% include "_input.html" %}{% endwith %}
         </div>
-        {% for error in form.id.errors %}
-        <span class="error">{{ error }}</span>
-        {% endfor %}
+        <div class="column">
+            <div class="entry">
+                {{ form.id.label }}
+                <div>
+                onext.io/{{ form.id(value=id) }}
+                </div>
+                {% for error in form.id.errors %}
+                <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    {% with item = form.chrome_url, icon = "chrome", placeholder = "chrome.google.com/webstore/detail/" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.firefox_url, icon = "firefox", placeholder = "addons.mozilla.org/en-US/firefox/addon/" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.safari_url, icon = "safari", placeholder = "apps.apple.com/us/app/" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.opera_url, icon = "opera", placeholder = "addons.opera.com/en/extensions/details/" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.edge_url, icon = "edge", placeholder = "microsoftedge.microsoft.com/addons/detail/" %}{% include "_input.html" %}{% endwith %}
-    {% with item = form.fallback_url, icon = "globe" %}{% include "_input.html" %}{% endwith %}
 
-    <p>{{ form.submit() }}</p>
+    {{ form.submit() }}
+    <input type="text" id="copy-content">
 </form>
 {% endblock %}
