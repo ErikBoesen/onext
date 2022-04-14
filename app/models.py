@@ -2,7 +2,7 @@ from app import app, db
 
 
 class Link(db.Model):
-    __tablename__ = 'links'
+    __tablename__ = 'link'
 
     id = db.Column(db.String, primary_key=True)
 
