@@ -60,6 +60,7 @@ h2 {
 }
 .entry i {
     margin-right: 5px;
+    font-size: 25px;
 }
 
 .entry.full .fa-chrome  { color: #3cba54; }

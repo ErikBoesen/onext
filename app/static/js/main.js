@@ -16,7 +16,7 @@ addEventListener('input', function(e) {
 });
 
 function updateQR() {
-    p.qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=onext.to/' + p.id.value;
+    p.qr.src = 'https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=https://onext.to/' + p.id.value;
 }
 updateQR();
 p.id.addEventListener('change', function() {
